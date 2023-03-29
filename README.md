@@ -1,6 +1,6 @@
 # Simple-Calculator
 Uma calculadora simples, feita apenas para praticar programação.
 
-## Subheader
+## Batata Frita
 
-Teste para tutorial.
+Adoro batata frita, ainda mais torrada e crocante (TESTE)
