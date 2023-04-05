@@ -1,9 +1,23 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    font-family:'Poppins';
+    
+
 }
 body {
     min-height: 100vh;
-    background: linear-gradient(to right top, #1E4AFA, #6986FB);
+    background: linear-gradient(to right top, #454D49, #686968);
+}
+
+header {
+    padding: 30px;
+    background: #0D0D0D;
+}
+
+.Title {
+    color: #D9D9D9;
 }
