@@ -7,64 +7,59 @@
     <title>Simple Calculator</title>
     
     <link rel="stylesheet" href="style.css">
-    <link rel="script" href="script.js">
+    <script src="script.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
-        <div class="innerHeader"> 
-            <h1 class="Title">Simple Calculator</h1>
+        <div class="inner-header"> 
+            <i class="fa fa-bars" id="bars"></i>
+            <h1 class="title">Simple Calculator</h1>
         </div>
     </header>
     <main>
-        <p class="Phrase">Meu projeto de calculadora</p>
-        <div class="Container">
-            <div class="calcPad">
-                <div class="screen">
-                    <input id="Screen" type="text" name="display">
+        <div class="calculator">
+            <div class="output">
+                <input id="screen" type="text" name="show" class="input-style" >
+            </div>
+            <div class="calc-pad">
+                <div class="row">
+                    <button id="ac" class="btn-style" value="AC" onclick="screen.value = ''">AC</button>
+                    <button id="root" class="btn-style" value="√" onclick="screen.value += ' ** 0.5'">√</button>
+                    <button id="percent" class="btn-style" value="/100" onclick="screen.value += '/100'">%</button>
+                    <button id="divide" class="btn-style" value="/" onclick="screen.value += '/'">/</button>
                 </div>
-                <div class="keyPad">
-                    <div class="FirstCollum">
-                        <button class="btn">AC</button>
-                        <button class="btn">7</button>
-                        <button class="btn">4</button>
-                        <button class="btn">1</button>
-                        <button class="btn">0</button>
-                    </div>
-                    <div class="SecondCollum">
-                        <button class="btn">(</button>
-                        <button class="btn">8</button>
-                        <button class="btn">5</button>
-                        <button class="btn">2</button>
-                        <button class="btn">,</button>
-                    </div>
-                    <div class="ThirdCollum">
-                        <button class="btn">)</button>
-                        <button class="btn">9</button>
-                        <button class="btn">6</button>
-                        <button class="btn">3</button>
-                        <button class="btn">%</button>
-                    </div>
-                    <div class="FourthCollum">
-                        <button class="btn">+</button>
-                        <button class="btn">/</button>
-                        <button class="btn">*</button>
-                        <button class="btn">-</button>
-                        <button class="btn-backspace"><img src="/icones/fi-bs-angle-small-left.png" alt="backspace"></button>
-                    </div>
-                    <div class="FifthCollum">
-                        <button class="btn">π</button>
-                        <button class="btn">√</button>
-                        <button class="btn">(x²)</button>
-                        <button class="equal">=</button>
-                    </div>
+                <div class="row">
+                    <button id="seven" class="btn-style" value="7" onclick="screen.value += '7'">7</button>
+                    <button id="eight" class="btn-style" value="8" onclick="screen.value += '8'">8</button>
+                    <button id="nine" class="btn-style" value="9" onclick="screen.value += '9'">9</button>
+                    <button id="times" class="btn-style" value="*" onclick="screen.value += '*'">*</button>
+                </div>
+                <div class="row">
+                    <button id="four" class="btn-style" value="4" onclick="screen.value += '4'">4</button>
+                    <button id="five" class="btn-style" value="5" onclick="screen.value += '5'">5</button>
+                    <button id="six" class="btn-style" value="6" onclick="screen.value += '6'">6</button>
+                    <button id="minus" class="btn-style" value="-" onclick="screen.value += '-'">-</button>
+                </div>
+                <div class="row">
+                    <button id="one" class="btn-style" value="1" onclick="screen.value += '1'">1</button>
+                    <button id="two" class="btn-style" value="2" onclick="screen.value += '2'">2</button>
+                    <button id="three" class="btn-style" value="3" onclick="screen.value += '3'">3</button>
+                    <button id="plus" class="btn-style" value="+" onclick="screen.value += '+'">+</button>
+                </div>
+                <div class="row">
+                    <button id="backspace" class="btn-style" value="-" onclick="screen.value = screen.value.toString().slice(0, -1)"><i class="fa fa-arrow-left"></i></button>
+                    <button id="zero" class="btn-style" onclick="screen.value += 0">0</button>
+                    <button id="dot" class="btn-style" value="." onclick="screen.value += '.'">.</button>
+                    <button id="equals" class="btn-style" value="=" onclick="screen.value = eval(screen.value)">=</button>
                 </div>
             </div>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
